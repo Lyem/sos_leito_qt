@@ -89,6 +89,8 @@ class PrincipalScreen(QMainWindow):
         self.pushButton.setText('Deletar')
         self.listLeitos.append(self.newname)
         self.pushButton.clicked.connect(lambda: self.deletarleito(r['nome'],r['cnes'],r['qtdTotal'],user))
+        if(user['permissao': 1]):
+            self.pushButton.hide()
         self.ui.gridLayout.addWidget(self.newname,row,collum,1,1, QtCore.Qt.AlignHCenter|QtCore.Qt.AlignVCenter)
 
 
